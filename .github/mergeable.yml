@@ -6,5 +6,9 @@ mergeable:
         must_include:
           regex: '### Goals|### Changes'
           regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
-          message: >
-           Please describe the goals (why) and changes (what) of the PR.
+          message: Please describe the goals (why) and changes (what) of the PR.
+         validate:
+      - do: description
+        no_empty:
+          enabled: true
+          message: Description matter and should not be empty. Provide detail with **what** was changed, **why** it was changed, and **how** it was changed.
