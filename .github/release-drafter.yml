@@ -19,8 +19,11 @@ version-resolver:
   major:
     labels:
       - 'major'
+      - 'breakingchange'
   minor:
     labels:
+      - 'feat'
+      - 'enhancement'
       - 'minor'
   patch:
     labels:
