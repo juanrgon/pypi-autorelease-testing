@@ -7,7 +7,6 @@ mergeable:
           regex: '### Goals|### Changes'
           regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
           message: Please describe the goals (why) and changes (what) of the PR.
-         validate:
       - do: description
         no_empty:
           enabled: true
