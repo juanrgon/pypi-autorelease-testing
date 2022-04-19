@@ -1,6 +1,10 @@
-- do: description
-  must_include:
-    regex: '### Goals|### Changes'
-    regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
-    message: >
-     Please describe the goals (why) and changes (what) of the PR.
+version: 2
+mergeable:
+  - when: pull_request.*, pull_request_review.*
+    validate:
+      - do: description
+        must_include:
+          regex: '### Goals|### Changes'
+          regex_flag: 'none' # Optional. Specify the flag for Regex. default is 'i', to disable default use 'none'
+          message: >
+           Please describe the goals (why) and changes (what) of the PR.
